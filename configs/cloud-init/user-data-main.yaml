@@ -1,0 +1,19 @@
+#cloud-config
+hostname: web01
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    plain_text_passwd: 'student_secure_pass123'
+    lock_passwd: false
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILbvObvOHcnP+PIBB2Bm82GMy1MYV1q+BFQm59jdl0vF theelphenomeno10@gmail.com
+ssh_pwauth: true
+package_update: true
+packages:
+  - qemu-guest-agent
+  - curl
+  - rsync
+  - tar
+  - shellcheck
+  - python3
