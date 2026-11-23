@@ -1,0 +1,11 @@
+[Unit]
+Description=Sao luu CSDL appdb va ma nguon app, dong bo sang srv-backup
+After=network-online.target mariadb.service
+Wants=network-online.target
+RequiresMountsFor=/mnt/data_backup
+
+[Service]
+Type=oneshot
+ExecStart=/opt/scripts/backup.sh
+StandardOutput=journal
+StandardError=journal

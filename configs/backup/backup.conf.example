@@ -1,0 +1,17 @@
+# backup.conf.example - Cấu hình cho backup.sh và restore.sh (TV2).
+# Cài đặt trên srv-main:
+#   sudo install -m 600 -o root -g root configs/backup/backup.conf.example /etc/backup.conf
+# rồi sửa REMOTE_HOST thành IP thật của srv-backup.
+
+BACKUP_DIR="/mnt/data_backup"
+APP_DIR="/opt/myapp"
+DB_NAME="appdb"
+APP_SERVICE="myapp"
+RETENTION_DAYS=7
+
+# Máy nhận bản sao lưu (srv-backup)
+REMOTE_USER="ubuntu"
+REMOTE_HOST="192.168.122.x"
+REMOTE_PORT=2222
+REMOTE_DIR="/home/ubuntu/backups"
+SSH_KEY="/root/.ssh/id_backup"
