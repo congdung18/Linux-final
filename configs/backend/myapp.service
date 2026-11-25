@@ -5,10 +5,10 @@ Wants=mariadb.service
 
 [Service]
 Type=simple
-User=longpham
+User=ubuntu
 WorkingDirectory=/opt/myapp
 EnvironmentFile=/etc/myapp/app.env
-ExecStart=/opt/myapp/venv/bin/python /opt/myapp/app.py
+ExecStart=/usr/bin/python3 /opt/myapp/app.py
 Restart=on-failure
 RestartSec=3s
 StandardOutput=journal
