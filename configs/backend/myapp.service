@@ -1,0 +1,18 @@
+[Unit]
+Description=Flask Backend Service
+After=network.target mariadb.service
+Wants=mariadb.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/myapp
+EnvironmentFile=/etc/myapp/app.env
+ExecStart=/usr/bin/python3 /opt/myapp/app.py
+Restart=on-failure
+RestartSec=3s
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
