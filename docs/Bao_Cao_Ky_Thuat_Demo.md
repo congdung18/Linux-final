@@ -111,10 +111,10 @@ flowchart TD
 
 ### 4.2 Quy trình khôi phục & Bằng chứng kiểm thử
 * **Script khôi phục:** [scripts/restore.sh](../scripts/restore.sh) hỗ trợ `-d` (chỉ CSDL), `-y` (bỏ qua hỏi xác nhận). Kiểm tra checksum `sha256sum -c` và `tar -tzf` trước khi giải nén, nạp lại SQL vào `mariadb`, đếm số bản ghi `items`, khôi phục mã nguồn và khởi động lại `myapp`.
-* **Bằng chứng thực nghiệm đã có sẵn trong repo (`docs/tv2/images/`):**
-  * MariaDB chỉ nghe trên `127.0.0.1` và chặn `appuser` thực hiện `DELETE`: ![Bind 127.0.0.1](./tv2/images/01_bind_127.0.0.1.png) ![Appuser denied](./tv2/images/08_appuser_bi_tu_choi_delete.png)
-  * Chạy `backup.sh`, đồng bộ sang `srv-backup`, retention & `backup.timer`: ![Backup run](./tv2/images/02_backup_chay.png) ![Srv-backup](./tv2/images/03_file_tren_srv-backup.png) ![Retention](./tv2/images/04_retention.png) ![Timer](./tv2/images/07_backup_timer.png)
-  * Diễn tập thảm họa (`DROP TABLE` $\rightarrow$ `restore.sh` phục hồi nguyên vẹn): ![Drop table](./tv2/images/05_drop_table.png) ![Restore success](./tv2/images/06_restore_thanh_cong.png)
+* **Bằng chứng thực nghiệm đã có sẵn trong repo (`screenshots/tv2/`):**
+  * MariaDB chỉ nghe trên `127.0.0.1` và chặn `appuser` thực hiện `DELETE`: ![Bind 127.0.0.1](../screenshots/tv2/01_bind_127.0.0.1.png) ![Appuser denied](../screenshots/tv2/08_appuser_bi_tu_choi_delete.png)
+  * Chạy `backup.sh`, đồng bộ sang `srv-backup`, retention & `backup.timer`: ![Backup run](../screenshots/tv2/02_backup_chay.png) ![Srv-backup](../screenshots/tv2/03_file_tren_srv-backup.png) ![Retention](../screenshots/tv2/04_retention.png) ![Timer](../screenshots/tv2/07_backup_timer.png)
+  * Diễn tập thảm họa (`DROP TABLE` $\rightarrow$ `restore.sh` phục hồi nguyên vẹn): ![Drop table](../screenshots/tv2/05_drop_table.png) ![Restore success](../screenshots/tv2/06_restore_thanh_cong.png)
 
 ---
 
