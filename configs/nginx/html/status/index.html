@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Lab - Server Status</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 24px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 32px;
+            border: 1px solid #334155;
+            border-radius: 12px;
+        }
+
+        .status {
+            color: #4ade80;
+            font-weight: bold;
+        }
+
+        dt {
+            color: #94a3b8;
+            margin-top: 16px;
+        }
+
+        dd {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Linux Infrastructure Lab</h1>
+    <div class="card">
+        <h2>Static Status Page</h2>
+        <p class="status">Nginx is serving this page</p>
+
+        <dl>
+            <dt>Server</dt>
+            <dd>srv-main</dd>
+
+            <dt>Environment</dt>
+            <dd>Ubuntu Server 22.04 LTS</dd>
+
+            <dt>Virtual Host</dt>
+            <dd>status.linux.local</dd>
+
+            <dt>Component</dt>
+            <dd>Web Proxy &amp; Security</dd>
+        </dl>
+    </div>
+    <p>Linux &amp; Applications - HCMUS</p>
+</body>
+</html>

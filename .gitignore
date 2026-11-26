@@ -1,0 +1,28 @@
+# Secrets
+.env
+.env.*
+!.env.example
+app.env
+tv4.conf
+
+# TLS private keys
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Runtime and temporary files
+*.log
+*.bak
+*.swp
+*.tmp
+
+# Local security audit data
+security-audit/
+lynis-report.dat
