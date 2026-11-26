@@ -89,9 +89,9 @@ flowchart TD
 * **Auditd:** Theo dõi đọc/ghi/thay đổi trên `/etc/passwd` và `/etc/shadow` với khóa tìm kiếm `sensitive_auth_changes`, truy vết được `auid` gốc của người dùng kể cả khi dùng `sudo`.
 * **Lynis:** Đạt điểm hardening `62` $\rightarrow$ `63` sau khi khắc phục 3 khuyến nghị (`BANNER-7126`, `AUTH-9286`, `FILE-6310`).
 
-* **Bằng chứng đã có (`screenshots/`):**
-  * Kích hoạt ban Fail2ban SSH: ![Fail2ban SSH ban](../screenshots/linuxFinal_fail2ban.png)
-  * Kết quả Lynis trước và sau khi khắc phục: ![Lynis before](../screenshots/linuxFinal_lynis_before.png) ![Lynis after](../screenshots/linuxFinal_lynis_after.png)
+* **Bằng chứng đã có (`screenshots/tv1/`):**
+  * Kích hoạt ban Fail2ban SSH: ![Fail2ban SSH ban](../screenshots/tv1/linuxFinal_fail2ban.png)
+  * Kết quả Lynis trước và sau khi khắc phục: ![Lynis before](../screenshots/tv1/linuxFinal_lynis_before.png) ![Lynis after](../screenshots/tv1/linuxFinal_lynis_after.png)
 
 > **[CHÈN ẢNH CÒN THIẾU]:** Ảnh chụp `ufw status verbose` và `ausearch -k sensitive_auth_changes -i` trên `srv-main`.
 
