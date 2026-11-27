@@ -1,0 +1,29 @@
+server {
+    server_tokens off;
+    listen ${HTTP_PORT};
+    listen [::]:${HTTP_PORT};
+
+    server_name ${STATUS_DOMAIN};
+
+    return 301 https://${STATUS_DOMAIN}${HTTPS_REDIRECT_PORT}$request_uri;
+}
+
+server {
+    server_tokens off;
+    listen ${HTTPS_PORT} ssl;
+    listen [::]:${HTTPS_PORT} ssl;
+
+    server_name ${STATUS_DOMAIN};
+
+    include snippets/linux-lab-tls.conf;
+
+    root /var/www/status;
+    index index.html;
+
+    access_log /var/log/nginx/status.access.log;
+    error_log /var/log/nginx/status.error.log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}

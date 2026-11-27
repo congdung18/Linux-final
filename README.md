@@ -91,3 +91,8 @@ sudo mount -a
 # Cấu hình SSH cổng 2222 và nạp luật UFW
 sudo bash scripts/setup_firewall.sh
 ```
+
+## TV4 — Web Proxy, TLS & Security
+
+- [Hướng dẫn triển khai và tài liệu TV4](docs/tv4/README.md)
+- [Minh chứng TV4](screenshots/tv4/README.md)

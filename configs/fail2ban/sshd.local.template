@@ -1,0 +1,16 @@
+[sshd]
+enabled = true
+
+port = ${SSH_PORT}
+protocol = tcp
+
+filter = sshd
+backend = auto
+logpath = /var/log/auth.log
+
+maxretry = ${F2B_MAXRETRY}
+findtime = ${F2B_FINDTIME}
+bantime = ${F2B_BANTIME}
+
+ignoreip = 127.0.0.1/8 ::1
+banaction = iptables-multiport
